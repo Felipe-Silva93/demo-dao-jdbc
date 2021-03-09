@@ -3,31 +3,27 @@ package model.entities;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Seller implements Serializable{
+public class Seller implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
-	
-	private Integer id ;
+
+	private Integer id;
 	private String name;
 	private String email;
 	private Date birthDate;
-	private Double basseSlaray;
-	
+	private Double baseSalary;
 	
 	private Department department;
 	
 	public Seller() {
-		
 	}
 
-	public Seller(Integer id, String name, String email, Date birthDate, Double basseSlaray, Department department) {
-		super();
+	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.birthDate = birthDate;
-		this.basseSlaray = basseSlaray;
+		this.baseSalary = baseSalary;
 		this.department = department;
 	}
 
@@ -63,12 +59,12 @@ public class Seller implements Serializable{
 		this.birthDate = birthDate;
 	}
 
-	public Double getBasseSlaray() {
-		return basseSlaray;
+	public Double getBaseSalary() {
+		return baseSalary;
 	}
 
-	public void setBasseSlaray(Double basseSlaray) {
-		this.basseSlaray = basseSlaray;
+	public void setBaseSalary(Double baseSalary) {
+		this.baseSalary = baseSalary;
 	}
 
 	public Department getDepartment() {
@@ -106,11 +102,7 @@ public class Seller implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate
-				+ ", basseSlaray=" + basseSlaray + ", department=" + department + "]";
+		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
+				+ baseSalary + ", department=" + department + "]";
 	}
-	
-	
-	
-	
 }

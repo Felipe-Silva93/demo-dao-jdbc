@@ -2,20 +2,17 @@ package model.entities;
 
 import java.io.Serializable;
 
-public class Department implements Serializable {/*implementa essa inter face  para o objeto seja gravado em sequencia de baytes
-é preciso fazer isso para que seus dados seja gravados em arquivos, trafegados em rede  e assim por diante
-*/
-	
+public class Department implements Serializable {
+
 	private static final long serialVersionUID = 1L;
+
 	private Integer id;
 	private String name;
 	
-	public Department() {//construtor padrão
-		
+	public Department() {
 	}
 
-	public Department(Integer id, String name) {//construtor padrão
-		/*super(); esse não está precisando */
+	public Department(Integer id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -35,7 +32,6 @@ public class Department implements Serializable {/*implementa essa inter face  p
 	public void setName(String name) {
 		this.name = name;
 	}
-	/*hashCode abd equals  para ser comparados os conteudos*/
 
 	@Override
 	public int hashCode() {
@@ -66,7 +62,4 @@ public class Department implements Serializable {/*implementa essa inter face  p
 	public String toString() {
 		return "Department [id=" + id + ", name=" + name + "]";
 	}
-	
-	
-	
 }
